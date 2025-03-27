@@ -11,4 +11,4 @@ data = pd.read_csv("CSV_files/heart_disease.csv")
 data.shape
 
 print(data['target'].value_counts())
-
+data.isnull().sum()
