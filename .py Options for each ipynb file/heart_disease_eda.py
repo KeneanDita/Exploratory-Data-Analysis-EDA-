@@ -18,5 +18,7 @@ data.value_counts('thal')
 
 sns.histplot(data['thalach'])
 plt.title("Maximum Heart Rate Achieved")
-plt.savefig('Maximum_Heart_Rate_Achieved_Distribution.png', dpi=300)
+# plt.savefig('Maximum_Heart_Rate_Achieved_Distribution.png', dpi=300)
 plt.show()
+
+sns.boxplot(x=data['age'])
