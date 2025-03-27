@@ -79,14 +79,5 @@ To get started with this project on your local machine, follow these steps:
 
 ---
 
-## 📞 **Contact**:
 Feel free to open an issue or reach out if you have any questions, suggestions, or feedback! 💬
-
----
-
-## 📄 **License**:
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
 Enjoy analyzing the data and getting insights! 🎉 Happy Exploring! 🧑‍🔬📈
