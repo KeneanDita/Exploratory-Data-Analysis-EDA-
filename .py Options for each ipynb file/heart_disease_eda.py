@@ -35,3 +35,11 @@ X = data.drop(columns=["target"])
 y = data["target"]
 X_scaled = scaler.fit_transform(X)
 X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
+
+tree = DecisionTreeClassifier(max_depth=5, random_state=42)
+tree.fit(X_train, y_train)
+
+y_pred_tree = tree.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred_tree)
+print(f"Decision Tree Accuracy: {accuracy:.4f}")
+print(classification_report(y_test, y_pred_tree))
