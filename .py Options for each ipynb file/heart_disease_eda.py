@@ -22,3 +22,16 @@ plt.title("Maximum Heart Rate Achieved")
 plt.show()
 
 sns.boxplot(x=data['age'])
+le = LabelEncoder()
+data['sex'] = le.fit_transform(data['sex'])
+data = pd.get_dummies(data, columns=['cp', 'thal'], drop_first=True)
+scaler = StandardScaler()
+data[['age', 'chol', 'thalach']] = scaler.fit_transform(data[['age', 'chol', 'thalach']])
+
+columns_to_drop = ["age_group", "cp_1", "cp_2", "cp_3", "thal_1", "thal_2", "thal_3"]
+data = data.drop(columns=[col for col in columns_to_drop if col in data.columns])
+
+X = data.drop(columns=["target"])
+y = data["target"]
+X_scaled = scaler.fit_transform(X)
+X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
