@@ -43,3 +43,9 @@ y_pred_tree = tree.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred_tree)
 print(f"Decision Tree Accuracy: {accuracy:.4f}")
 print(classification_report(y_test, y_pred_tree))
+
+export_graphviz(tree, out_file='decision_tree.dot', 
+                feature_names=X.columns, 
+                class_names=sorted(y.unique().astype(str)), 
+                label='all', 
+                rounded=True, filled=True)
