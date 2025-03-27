@@ -12,3 +12,11 @@ data.shape
 
 print(data['target'].value_counts())
 data.isnull().sum()
+data.describe()
+
+data.value_counts('thal')
+
+sns.histplot(data['thalach'])
+plt.title("Maximum Heart Rate Achieved")
+plt.savefig('Maximum_Heart_Rate_Achieved_Distribution.png', dpi=300)
+plt.show()
