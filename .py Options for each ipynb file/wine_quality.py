@@ -37,3 +37,10 @@ plt.xlabel('Predicted')
 plt.ylabel('Actual')
 plt.title('Confusion Matrix')
 plt.show()
+
+export_graphviz(tree, out_file='wine_decision_tree.dot', 
+                feature_names=X.columns, 
+                class_names=['Not Good', 'Good'], 
+                label='all', 
+                rounded=True, filled=True)
+print("Decision Tree exported to 'wine_decision_tree.dot'.")
