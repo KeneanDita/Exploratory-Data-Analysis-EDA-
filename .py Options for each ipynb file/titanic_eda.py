@@ -92,3 +92,6 @@ export_graphviz(tree, out_file='decision_tree.dot',
                 class_names=sorted(y.unique().astype(str)), 
                 label='all', 
                 rounded=True, filled=True)
+
+data.to_csv('titanic_cleaned.csv', index=False)
+print("\nCleaned dataset saved as 'titanic_cleaned.csv'")

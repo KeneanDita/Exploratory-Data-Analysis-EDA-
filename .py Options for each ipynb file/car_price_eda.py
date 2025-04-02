@@ -83,3 +83,7 @@ plt.xlabel('Predicted')
 plt.ylabel('Actual')
 plt.title('Confusion Matrix')
 plt.show()
+
+
+data.to_csv('car_price_cleaned.csv', index=False)
+print("\nCleaned dataset saved as 'car_price_cleaned.csv'")

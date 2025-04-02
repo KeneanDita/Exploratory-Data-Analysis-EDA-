@@ -44,3 +44,6 @@ export_graphviz(tree, out_file='wine_decision_tree.dot',
                 label='all', 
                 rounded=True, filled=True)
 print("Decision Tree exported to 'wine_decision_tree.dot'.")
+
+data.to_csv('wine_quality_cleaned.csv', index=False)
+print("\nCleaned dataset saved as 'wine_quality_cleaned.csv'")
