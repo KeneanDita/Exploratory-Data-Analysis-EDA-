@@ -8,7 +8,7 @@ from sklearn.tree import DecisionTreeClassifier, export_graphviz
 from sklearn.metrics import accuracy_score, classification_report
 
 # Load the Titanic dataset
-data = pd.read_csv('titanic.csv')
+data = pd.read_csv('CSV_files/titanic.csv')
 
 # Check for missing values and summarize the missing data
 print(data.isnull().sum())  # Summarize the number of missing values in each column
