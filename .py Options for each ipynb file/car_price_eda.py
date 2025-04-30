@@ -9,8 +9,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
-# Step 1: Load the dataset with error handling
-file_path = "car_price.csv"  # Update with the full path if necessary
+
 try:
     data = pd.read_csv(file_path)
 except FileNotFoundError:
